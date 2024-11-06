@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover; 
+            z-index: -1;
+            filter: blur(10px); 
+        }
+
+        #TaskStore, form {
+            z-index: 1;
+            backdrop-filter: blur(5px); 
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+        }
+        #TaskStore{
+            justify-content: space-around;
+margin-top: 40px;   
+         width: 200px;
+         text-align: center;
+        }
+        #TaskStore p{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .Inputt {
+            z-index: 1;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #cccccc94;
+            border-radius: 5px;
+        }
+
+        input{
+            border: none;
+            outline: none;
+            background-color: rgba(240, 248, 255, 0.349);
+            color: aqua;
+        }
+        input::placeholder{
+            color: turquoise;
+            text-align: center;
+        }
+        
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <video src="./Backgroud.mp4" loop autoplay muted></video>
+
+    <form id="form">
+        <input class="Inputt" type="text" id="inp" placeholder="Enter a task">
+    </form>
+
+    <div id="TaskStore">
+        <p></p>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
